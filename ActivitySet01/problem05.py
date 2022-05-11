@@ -1,12 +1,13 @@
 # Functions
-score = float(input("Enter Score: "))
-if score >= 0.9:
-    print("A")
-elif score >= 0.8:
-    print("B")
-elif score >= 0.7:
-    print("C")
-elif score >= 0.6:
-    print("D")
-elif score < 0.6:
-    print("F")
+def computepay(h, r):
+    if h<=40:
+        total = h*r
+    else:
+        total=r*40 + r*(h-40)*1.5
+    return total
+    
+
+h = float(input("Enter Hours:"))
+r=float(input("rate"))
+p = computepay(h, r)
+print("Pay", p)
