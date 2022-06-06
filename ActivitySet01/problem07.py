@@ -1,6 +1,8 @@
 # Strings
 
-text = "X-DSPAM-Confidence:    0.8475"
-f = text.find("0")
-x=float(text[f:40])
-print(x)
+string = 'X-DSPAM-Confidence: 0.8475'
+pos = string.find(':')
+number = string[pos + 1:]
+convert = float(number)
+print(convert)
+
